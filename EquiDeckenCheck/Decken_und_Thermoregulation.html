@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+version 5.1
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EquiDeckenCheck</title>
+    <style>
+        /* Stildefinitionen */
+        * { box-sizing: border-box; }
+        .row::after { content: ""; clear: both; display: table; }
+        [class*="col-"] { float: left; padding: 15px; }
+        .col-1  { width: 8.33%; }
+        .col-2  { width: 16.66%; }
+        .col-3  { width: 25%; }
+        .col-4  { width: 33.33%; }
+        .col-5  { width: 41.66%; }
+        .col-6  { width: 50%; }
+        .col-7  { width: 58.33%; }
+        .col-8  { width: 66.66%; }
+        .col-9  { width: 75%;  }
+        .col-10 { width: 83.33%; }
+        .col-11 { width: 91.66%; }
+        .col-12 { width: 100%; }
+        
+        html { font-family: "Lucida Sans", sans-serif; }
+        
+        .header { background-color: #008000; color: #ffffff; padding: 15px; }
 
+                /* Menü-Stil */
+        
+
+        .navbar {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: #007bff;
+                    color: white;
+                    padding: 10px 20px;
+                    position: relative;
+                }
+        
+                .navbar .brand {
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+        
+                .navbar .menu-icon {
+                    display: none;
+                    font-size: 24px;
+                    cursor: pointer;
+                }
+        
+                .navbar ul {
+                    list-style: none;
+                    display: flex;
+                    gap: 15px;
+                }
+        
+                .navbar ul li a {
+                    text-decoration: none;
+                    color: white;
+                    padding: 8px 15px;
+                    transition: background-color 0.3s ease;
+                }
+        
+                .navbar ul li a:hover {
+                    background-color: #0056b3;
+                    border-radius: 5px;
+                }
+        
+        /* Mobile Ansicht */
+        @media (max-width: 768px) {
+            .navbar .menu-icon {
+                display: block;
+            }
+
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                background-color: #007bff;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            .navbar ul.open {
+                display: flex;
+            }
+
+            .navbar ul li {
+                text-align: center;
+            }
+
+            .navbar ul li a {
+                display: block;
+                padding: 10px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar"> <!-- navigationsbar -->
+        <div class="Brandname">EquiDeckenCheck</div>
+        <div class="menu-icon" onclick="toggleMenue()">☰</div>
+        <ul id="menu-list">
+            <li><a href="#option1">Option 1</a></li>
+            <li><a href="#option2">Option 2</a></li>
+            <li><a href="#option3">Option 3</a></li>
+        </ul>
+    </div>
+
+        <!-- Scripts -->
+    <script defer>
+
+            
+            // Menü
+            function toggleMenue() {
+                const menu = document.getElementById('menu-list');
+                menu.classList.toggle('open');
+            }
+        
+    </script>
+</body>
+</html>
