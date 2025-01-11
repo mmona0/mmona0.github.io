@@ -565,7 +565,7 @@
                 if (Fellzustand === "geschoren" || Gesundheit === "krank") {
                     if (temp >= 11) {
                         füllung = "";
-                        deckenart = witterungCode < 3 ? 'Keine Decke' : 'Regendecke';
+                        deckenart = witterungCode <= 3 ? 'Keine Decke' : 'Regendecke';
                     } else if (temp >= 6) {
                         füllung = "50g - 100g";
                     } else if (temp >= 1) {
@@ -581,7 +581,7 @@
                     if (Bewegung === "viel") {
                         if (temp >= 11) {
                             füllung = "";
-                            deckenart = witterungCode < 3 ? 'Keine Decke' : 'Regendecke';
+                            deckenart = witterungCode <= 3 ? 'Keine Decke' : 'Regendecke';
                         } else if (temp >= 6) {
                             füllung = "0g";
                         } else if (temp >= 1) {
@@ -596,7 +596,7 @@
                     } else {
                         if (temp >= 11) {
                             füllung = "";
-                            deckenart = witterungCode < 3 ? 'Keine Decke' : 'Regendecke';
+                            deckenart = witterungCode <= 3 ? 'Keine Decke' : 'Regendecke';
                         } else if (temp >= 6) {
                             füllung = "50g";
                         } else if (temp >= 1) {
